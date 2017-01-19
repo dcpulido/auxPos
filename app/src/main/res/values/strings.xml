@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">posAux</string>
+    <string name="edit_message">server</string>
+    <string name="button_send">guardar</string>
+    <string name="init_map">MAP</string>
+    <string name="ngrok">tcp://0.tcp.ngrok.io:</string>
+</resources>
