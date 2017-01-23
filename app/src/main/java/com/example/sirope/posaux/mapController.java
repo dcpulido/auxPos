@@ -38,6 +38,7 @@ import java.util.List;
 
 public class mapController extends FragmentActivity implements OnMapReadyCallback {
     private static final LatLng CTAG = new LatLng(42.4, -8.1);
+    private static final campo lalingrado=new campo("lalingrado",42.387273,-8.02800,0);
     private GoogleMap mMap;
     private WebSocketClient mWebSocketClient;
     private List<elem> elems = new ArrayList<elem>();
@@ -104,7 +105,8 @@ public class mapController extends FragmentActivity implements OnMapReadyCallbac
             Log.i("Websocket",e.toString());
             if(e.get_id()=="self"){
                 CameraPosition cameraPosition = new CameraPosition.Builder()
-                        .target(e.get_pos())      // Sets the center of the map to Mountain View
+                        //.target(e.get_pos())      // Sets the center of the map to Mountain View
+                        .target(lalingrado.get_pos())
                         .zoom(19)                   // Sets the zoom
                         .tilt(30)                   // Sets the tilt of the camera to 30 degrees
                         .build();                   // Creates a CameraPosition from the builder

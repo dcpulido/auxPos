@@ -12,12 +12,13 @@ public class elem {
     private LatLng pos = new LatLng(0, 0);
 
 
+
     public elem(){
         this.id="";
     }
     public elem(String i,double lat,double lng){
         this.id=i;
-        this.pos=new LatLng(lat,lng);
+        this.pos=new LatLng(lng,lat);
     }
 
     public String get_id(){
