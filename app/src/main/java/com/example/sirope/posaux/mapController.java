@@ -45,6 +45,7 @@ public class mapController extends FragmentActivity implements OnMapReadyCallbac
     private GPSTracker gps;
     private List<Marker> markers = new ArrayList<Marker>();
     private String server;
+    private String map;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -60,6 +61,7 @@ public class mapController extends FragmentActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_map_controller);
         Intent intent = getIntent();
         server = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        map = intent.getStringExtra(MainActivity.EXTRA_MAP);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -97,10 +99,7 @@ public class mapController extends FragmentActivity implements OnMapReadyCallbac
     }
 
     private void renderMap(GoogleMap googleMap, ArrayList<elem> elems) {
-
         mMap = googleMap;
-
-
         for (elem e: elems) {
             Log.i("Websocket",e.toString());
             if(e.get_id()=="self"){

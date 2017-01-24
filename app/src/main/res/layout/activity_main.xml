@@ -29,10 +29,20 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <Spinner android:id="@+id/map_spinner"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/map_message"
+            android:entries="@array/map_spinner" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <TextView android:id="@+id/server_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
-
     </LinearLayout>
     <LinearLayout
         android:gravity="bottom"
